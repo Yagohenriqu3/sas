@@ -1,0 +1,3 @@
+ALTER TABLE `Store`
+  ADD COLUMN `logoUrl` VARCHAR(191) NULL,
+  ADD COLUMN `preparationTime` VARCHAR(191) NULL;

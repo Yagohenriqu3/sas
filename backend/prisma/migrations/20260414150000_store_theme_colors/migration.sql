@@ -1,0 +1,4 @@
+ALTER TABLE `Store`
+  ADD COLUMN `primaryColor` VARCHAR(191) NULL,
+  ADD COLUMN `secondaryColor` VARCHAR(191) NULL,
+  ADD COLUMN `tertiaryColor` VARCHAR(191) NULL;
