@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color: #111827;
+  background-color: #fffdf8;
+  font-family: 'Manrope', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c38 100%);
+  padding: 0.9rem 1.45rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 18px 40px rgba(255, 107, 0, 0.24);
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 50px rgba(255, 107, 0, 0.3);
+}
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.9rem 1.45rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 107, 0, 0.25);
+  background: #fff3e8;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ff6b00;
+}
+
+.section-title {
+  margin-top: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #1e1e1e;
+}
+
+.section-copy {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #5f6b7a;
+}
+
+.shadow-soft {
+  box-shadow: 0 24px 60px rgba(30, 30, 30, 0.08);
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #ffffff;
+  padding: 0.95rem 1rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.input-field::placeholder {
+  color: #94a3b8;
+}
+
+.input-field:focus {
+  border-color: rgba(255, 107, 0, 0.55);
+  box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.12);
+}
