@@ -22,6 +22,8 @@ function Account() {
   const navigate = useNavigate()
   const session = getSavedAuth()
   const [subscriptionMessage, setSubscriptionMessage] = useState('')
+  const [loadingPlanId, setLoadingPlanId] = useState('')
+  const [plansOpen, setPlansOpen] = useState(false)
 
   if (!session?.token || !session?.user || !session?.store) {
     return (
@@ -41,8 +43,6 @@ function Account() {
   const { user, store } = session
   const isTrial = String(store.subscriptionStatus || '').toLowerCase() === 'trial'
   const isActive = String(store.subscriptionStatus || '').toLowerCase() === 'active'
-  const [loadingPlanId, setLoadingPlanId] = useState('')
-  const [plansOpen, setPlansOpen] = useState(false)
 
   async function handleChoosePlan(planId) {
     setSubscriptionMessage('')
